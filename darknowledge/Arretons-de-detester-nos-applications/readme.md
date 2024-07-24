@@ -4,7 +4,7 @@ Dans ce billet, nous allons discuter d'un sujet crucial pour les développeurs e
 En effet, lorsqu'il s'agit de tester des applications web, les tests automatisés jouent un rôle vital car ils peuvent être exécutés à plusieurs reprises sans effort et manuel supplémentaire. Parmi les tests automatisés, les tests end-to-end (E2E) sont particulièrement importants car ils simulent des cas d'utilisation réels. Cependant, il existe des pratiques courantes qui limitent la pertinence de ces tests.<br/>
 Nous allons ici examiner 3 mauvaises pratiques, ou erreurs courantes, qui limitent la pertinence de vos tests de bout en bout.
 
-### 1. Ecrire des tests developer-centric
+## 1. Ecrire des tests developer-centric
 
 La première erreur courante que l'on peut citer est de rédiger des tests E2E centrés sur le développeur.<br/>
 Pour comprendre ce que nous entendons par test E2E centré sur le développeur, prenons un exemple.<br/>
@@ -23,7 +23,7 @@ Cet exemple montre le même test écrit avec la solution UUV.
 <img src="test-user-centric.png" alt="Test User centric"/><br/>
 Le nom et le rôle accessibles sont utilisés pour exprimer le cas d'utilisation dans un langage anglais simple.
 
-### 2. Oublier l'utilisation du clavier
+## 2. Oublier l'utilisation du clavier
 
 La seconde erreur courante est de négliger l'usage du clavier lors des tests. Les directives WCAG stipulent que tous les éléments interactifs doivent être accessibles via une interface clavier. Cela profite non seulement aux personnes ayant des handicaps visuels ou moteurs, mais aussi à ceux qui préfèrent utiliser le clavier pour des raisons de productivité.<br/>
 Pour remplir un formulaire comme celui-ci :<br/>
@@ -35,7 +35,7 @@ Pour les plus expérimentés d'entre nous, la navigation au clavier est un excel
 
 La première partie est identique à la navigation à la souris. Ensuite, nous plaçons le focus sur le coin gauche de l'application. Puis nous déplaçons le focus lorsque nous appuyons sur la touche tabulation et nous vérifions que le focus est sur le lien nommé weather App's logo. Nous reproduisons ce mécanisme avant de le soumettre.
 
-### 3. Ignorer l'accessibilité (#a11y)
+## 3. Ignorer l'accessibilité (#a11y)
 
 Contrairement à ce que l'on pourrait croire, les tests E2E sont un excellent contexte pour effectuer des vérifications d'accessibilité en utilisant des outils comme axe-core pour effectuer des contrôles de référence WCAG, ou en utilisant des bibliothèques comme `uuv/a11y` pour les vérifications RGAA. Il est important de garantir la non-régression de l'accessibilité lorsque l'on met à jour nos interfaces, surtout à une époque où l'intelligence artificielle prend de plus en plus de place.<br/>
 
